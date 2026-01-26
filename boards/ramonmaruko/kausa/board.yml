@@ -1,0 +1,56 @@
+board:
+  name: kausa
+  full_name: Kausa Keyboard
+  vendor: ramonmaruko
+  socs:
+    - name: nrf54l15
+      variants:
+        - name: xip
+          cpucluster: cpuflpr
+        - name: ns
+          cpucluster: cpuapp
+        - name: left
+          cpucluster: cpuapp
+        - name: right
+          cpucluster: cpuapp
+runners:
+  run_once:
+    '--recover':
+      - runners:
+          - nrfjprog
+          - nrfutil
+        run: first
+        groups:
+          - boards:
+              - kausa/nrf54l15/cpuapp
+              - kausa/nrf54l15/cpuapp/left
+              - kausa/nrf54l15/cpuapp/right
+              - kausa/nrf54l15/cpuapp/ns
+              - kausa/nrf54l15/cpuflpr
+              - kausa/nrf54l15/cpuflpr/xip
+    '--erase':
+      - runners:
+          - nrfjprog
+          - jlink
+          - nrfutil
+        run: first
+        groups:
+          - boards:
+              - kausa/nrf54l15/cpuapp
+              - kausa/nrf54l15/cpuapp/ns
+              - kausa/nrf54l15/cpuflpr
+              - kausa/nrf54l15/cpuflpr/xip
+    '--reset':
+      - runners:
+          - nrfjprog
+          - jlink
+          - nrfutil
+        run: last
+        groups:
+          - boards:
+              - kausa/nrf54l15/cpuapp
+              - kausa/nrf54l15/cpuapp/left
+              - kausa/nrf54l15/cpuapp/right
+              - kausa/nrf54l15/cpuapp/ns
+              - kausa/nrf54l15/cpuflpr
+              - kausa/nrf54l15/cpuflpr/xip
