@@ -1,18 +1,21 @@
-board:
-  name: kausa
-  full_name: Kausa Keyboard
-  vendor: ramonmaruko
-  socs:
-    - name: nrf54l15
-      variants:
-        - name: xip
-          cpucluster: cpuflpr
-        - name: ns
-          cpucluster: cpuapp
-        - name: left
-          cpucluster: cpuapp
-        - name: right
-          cpucluster: cpuapp
+boards:
+  - name: kausa_left
+    full_name: Kausa (Left)
+    vendor: ramonmaruko
+    socs:
+      - name: nrf54l15
+        variants:
+          - name: zmk
+            cpucluster: cpuapp
+  - name: kausa_right
+    full_name: Kausa (Right)
+    vendor: ramonmaruko
+    socs:
+      - name: nrf54l15
+        variants:
+          - name: zmk
+            cpucluster: cpuapp
+
 runners:
   run_once:
     '--recover':
@@ -22,12 +25,8 @@ runners:
         run: first
         groups:
           - boards:
-              - kausa/nrf54l15/cpuapp
-              - kausa/nrf54l15/cpuapp/left
-              - kausa/nrf54l15/cpuapp/right
-              - kausa/nrf54l15/cpuapp/ns
-              - kausa/nrf54l15/cpuflpr
-              - kausa/nrf54l15/cpuflpr/xip
+              - kausa_left/nrf54l15/cpuapp/zmk
+              - kausa_right/nrf54l15/cpuapp/zmk
     '--erase':
       - runners:
           - nrfjprog
@@ -36,10 +35,8 @@ runners:
         run: first
         groups:
           - boards:
-              - kausa/nrf54l15/cpuapp
-              - kausa/nrf54l15/cpuapp/ns
-              - kausa/nrf54l15/cpuflpr
-              - kausa/nrf54l15/cpuflpr/xip
+              - kausa_left/nrf54l15/cpuapp/zmk
+              - kausa_right/nrf54l15/cpuapp/zmk
     '--reset':
       - runners:
           - nrfjprog
@@ -48,9 +45,5 @@ runners:
         run: last
         groups:
           - boards:
-              - kausa/nrf54l15/cpuapp
-              - kausa/nrf54l15/cpuapp/left
-              - kausa/nrf54l15/cpuapp/right
-              - kausa/nrf54l15/cpuapp/ns
-              - kausa/nrf54l15/cpuflpr
-              - kausa/nrf54l15/cpuflpr/xip
+              - kausa_left/nrf54l15/cpuapp/zmk
+              - kausa_right/nrf54l15/cpuapp/zmk

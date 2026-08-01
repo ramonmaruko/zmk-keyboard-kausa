@@ -1,14 +1,10 @@
-# Copyright (c) 2024 Nordic Semiconductor ASA
-# SPDX-License-Identifier: Apache-2.0
-
-identifier: kausa/nrf54l15/cpuapp
-name: nRF54l15-DK-nRF54l15-Application
+identifier: kausa
+name: Kausa
 type: mcu
 arch: arm
 toolchain:
   - gnuarmemb
   - zephyr
-sysbuild: true
 ram: 188
 flash: 1428
 supported:
