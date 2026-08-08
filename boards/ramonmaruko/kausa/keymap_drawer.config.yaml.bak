@@ -1,0 +1,2 @@
+parse_config:
+  zmk_additional_includes: ["/var/home/marco/src/zmk-helpers/include"]

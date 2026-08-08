@@ -136,9 +136,11 @@
 	pinctrl-names = "default", "sleep";
 	clock-frequency = <I2C_BITRATE_STANDARD>;
 
-	npm1300: npm1300@6b {
+	npm1300_pmic: pmic@6b {
 		compatible = "nordic,npm1300";
 		reg = <0x6b>;
+		host-int-gpios = <&gpio0 0 0>;
+		pmic-int-pin = <1>;
 
 		npm1300_gpio: gpio-controller {
 			compatible = "nordic,npm1300-gpio";
