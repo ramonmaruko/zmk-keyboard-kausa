@@ -139,7 +139,7 @@
 	npm1300_pmic: pmic@6b {
 		compatible = "nordic,npm1300";
 		reg = <0x6b>;
-		host-int-gpios = <&gpio0 0 0>;
+		host-int-gpios = <&gpio0 0 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)>;
 		pmic-int-pin = <1>;
 
 		npm1300_gpio: gpio-controller {
