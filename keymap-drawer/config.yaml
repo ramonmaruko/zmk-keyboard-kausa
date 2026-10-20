@@ -8,7 +8,7 @@ draw_config:
   key_ry: 6.0
   dark_mode: false
   n_columns: 1
-  separate_combo_diagrams: false
+  separate_combo_diagrams: true
   combo_diagrams_scale: 2
   inner_pad_w: 2.0
   inner_pad_h: 2.0
@@ -54,8 +54,8 @@ parse_config:
   layer_legend_map: {}
   mark_alternate_layer_activators: false
   modifier_fn_map:
-    left_ctrl: '⎈'
-    right_ctrl: '⎈'
+    left_ctrl: '^'
+    right_ctrl: '^'
     left_shift: '⇧'
     right_shift: '⇧'
     left_alt: '⎇'
@@ -75,8 +75,8 @@ parse_config:
     RSHFT: '⇧'
     LALT: '⎇'
     RALT: '⎇'
-    LCTRL: '⎈'
-    RCTRL: '⎈'
+    LCTRL: '^'
+    RCTRL: '^'
     LGUI: '⌘'
     RGUI: '⌘'
     EXCLAMATION: '!'
@@ -143,8 +143,6 @@ parse_config:
     NON_US_HASH: '#'
     NUHS: '#'
     TILDE2: '~'
-  zmk_combos:
-    qu: {offset: 2.12, align: top, arc_scale: 1.03}
   zmk_preamble: |
     #include <zmk-helpers/key-labels/54.h>
     #define KEYMAP_DRAWER
