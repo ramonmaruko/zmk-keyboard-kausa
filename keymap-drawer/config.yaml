@@ -41,7 +41,7 @@ parse_config:
   skip_binding_parsing: false
   raw_binding_map:
     "&caps_word": Caps Word
-    # "&qu": QU
+    "&qu": QU
     "&magic_shift": { "t": Magic, "h": "Shift" }
     "&hpmt": { "t": "Shift", "h": "BSPC" }
     "&num_word 4": numword
