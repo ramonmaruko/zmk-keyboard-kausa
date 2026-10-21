@@ -1,0 +1,10 @@
+file_format: "1"
+id: kausa
+name: Kausa
+type: board
+url: https://github.com/ramonmaruko/zmk-keyboard-kausa/
+features:
+  - keys
+siblings:
+  - kausa_left
+  - kausa_right
