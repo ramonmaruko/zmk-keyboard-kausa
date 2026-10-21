@@ -5,3 +5,4 @@ manifest:
   projects:
     - name: zmk-auto-layer
       remote: urob
+      revision: main
