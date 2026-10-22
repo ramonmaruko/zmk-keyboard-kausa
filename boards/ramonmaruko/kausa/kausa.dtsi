@@ -12,7 +12,7 @@
 
 / {
 	model = "Kausa";
-	commpatible = "kausa";
+	commpatible = "ramonmaruko,kausa";
 
 	chosen {
 		zephyr,boot-mode = &boot_mode0;
