@@ -1,5 +1,7 @@
 name: zmk-keyboard-kausa
 build:
+  depends:
+    - nrfxlib
   settings:
     board_root: .
     dts_root: .

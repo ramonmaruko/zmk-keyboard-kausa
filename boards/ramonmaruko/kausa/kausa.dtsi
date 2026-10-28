@@ -126,7 +126,7 @@
 	npm1300_pmic: pmic@6b {
 		compatible = "nordic,npm1300";
 		reg = <0x6b>;
-		host-int-gpios = <&gpio0 0 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)>;
+		host-int-gpios = <&gpio0 0 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
 		pmic-int-pin = <1>;
 
 		npm1300_gpio: gpio-controller {
@@ -139,30 +139,11 @@
 		npm1300_regulators: regulators {
 			compatible = "nordic,npm1300-regulator";
 
-			/* limits are set to min/max allowed values */
-			npm1300_ek_buck1: BUCK1 {
-				regulator-min-microvolt = <1000000>;
-				regulator-max-microvolt = <3300000>;
-				regulator-boot-off;
-			};
-
 			npm1300_ek_buck2: BUCK2 {
-				regulator-min-microvolt = <1000000>;
+				regulator-min-microvolt = <3300000>;
 				regulator-max-microvolt = <3300000>;
 				regulator-always-on;
 				regulator-boot-on;
-			};
-
-			npm1300_ek_ldo1: LDO1 {
-				regulator-min-microvolt = <1000000>;
-				regulator-max-microvolt = <3300000>;
-				regulator-boot-off;
-			};
-
-			npm1300_ek_ldo2: LDO2 {
-				regulator-min-microvolt = <1000000>;
-				regulator-max-microvolt = <3300000>;
-				regulator-boot-off;
 			};
 		};
 
