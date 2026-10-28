@@ -2,7 +2,13 @@ manifest:
   remotes:
     - name: urob
       url-base: https://github.com/urob
+    - name: nrfconnect
+      url-base: https://github.com/nrfconnect
   projects:
     - name: zmk-auto-layer
       remote: urob
+      revision: main
+    - name: sdk-nrfxlib
+      remote: nrfconnect
+      repo-path: sdk-nrfxlib
       revision: main
