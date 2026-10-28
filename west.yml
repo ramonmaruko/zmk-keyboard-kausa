@@ -8,7 +8,7 @@ manifest:
     - name: zmk-auto-layer
       remote: urob
       revision: main
-    - name: sdk-nrfxlib
+    - name: nrfxlib
       remote: nrfconnect
       repo-path: sdk-nrfxlib
       revision: main
